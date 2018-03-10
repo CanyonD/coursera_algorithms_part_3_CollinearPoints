@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FastCollinearPoints {
-    private LineSegment[] ls;
+    private final LineSegment[] ls;
 
     public FastCollinearPoints(Point[] points)     // finds all line segments containing 4 or more points
     {
@@ -34,7 +34,7 @@ public class FastCollinearPoints {
                         break;
                     }
                     s2 = p[0].slopeTo(p[k++]);
-                } while (s1 == s2);
+                } while (Double.compare(s1, s2) == 0);
                 if (k - j < 4) {
                     j++;
                     continue;
@@ -43,8 +43,8 @@ public class FastCollinearPoints {
                 Point[] line = new Point[len];
                 line[0] = p[0];
 
-                for (int l = 1; l < len; l++) {
-                    line[l] = p[j + l - 1];
+                for (int g = 1; g < len; g++) {
+                    line[g] = p[j + g - 1];
                 }
                 Arrays.sort(line);
                 // remove duplicate
