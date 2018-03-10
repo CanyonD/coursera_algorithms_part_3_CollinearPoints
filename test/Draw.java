@@ -3,7 +3,7 @@ import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 
 public class Draw {
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         // read the n points from a file
         In in = new In(args[0]);
         int n = in.readInt();
@@ -30,6 +30,8 @@ public class Draw {
             segment.draw();
         }
         StdDraw.show();
+
+        StdOut.println();
 
         // print and draw the line segments
         FastCollinearPoints collinear2 = new FastCollinearPoints(points);

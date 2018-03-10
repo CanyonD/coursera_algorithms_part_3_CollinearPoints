@@ -7,29 +7,29 @@ public class FastCollinearPoints {
 
     public FastCollinearPoints(Point[] points)     // finds all line segments containing 4 or more points
     {
-        if (points == null) throw new NullPointerException("argument is null");
-        int n = points.length;
-        for (int i = 0; i < n; i++) {
-            if (points[i] == null) throw new NullPointerException("array contains null point");
-            for (int j = i + 1; j < n; j++) {
+        if (points == null) throw new IllegalArgumentException();
+        int count = points.length;
+        for (int i = 0; i < count; i++) {
+            if (points[i] == null) throw new IllegalArgumentException();
+            for (int j = i + 1; j < count; j++) {
                 if (points[i].compareTo(points[j]) == 0)
-                    throw new IllegalArgumentException("array contains a repeated point");
+                    throw new IllegalArgumentException();
             }
         }
         Point[] ps = points.clone();
         Arrays.sort(ps);
         List<LineSegment> list = new ArrayList<>();
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < count; i++) {
             Point[] p = ps.clone();
             Arrays.sort(p, p[i].slopeOrder());
             int j = 1;
-            while (j < n - 2) {
+            while (j < count - 2) {
                 int k = j;
                 double s1 = p[0].slopeTo(p[k++]);
                 double s2;
                 do {
-                    if (k == n) {
+                    if (k == count) {
                         k++;
                         break;
                     }
