@@ -1,4 +1,4 @@
-"# coursera_algorithms_part_3" 98/100
+"# coursera_algorithms_part_3" 100/100
 
 See the Assessment Guide for information on how to interpret this report.
 
@@ -7,24 +7,24 @@ ASSESSMENT SUMMARY
 Compilation:  PASSED
 API:          PASSED
 
-Findbugs:     FAILED (1 warning)
+Findbugs:     PASSED
 PMD:          PASSED
 Checkstyle:   PASSED
 
-Correctness:  39/41 tests passed
+Correctness:  41/41 tests passed
 Memory:       1/1 tests passed
 Timing:       41/41 tests passed
 
-Aggregate score: 97.07%
+Aggregate score: 100.00%
 [Compilation: 5%, API: 5%, Findbugs: 0%, PMD: 0%, Checkstyle: 0%, Correctness: 60%, Memory: 10%, Timing: 20%]
 
 ASSESSMENT DETAILS
 
 The following files were submitted:
 ----------------------------------
-2.0K Mar 10 08:06 BruteCollinearPoints.java
-2.3K Mar 10 08:06 FastCollinearPoints.java
-2.0K Mar 10 08:06 Point.java
+2.3K Mar 10 09:44 BruteCollinearPoints.java
+2.4K Mar 10 09:44 FastCollinearPoints.java
+2.0K Mar 10 09:44 Point.java
 
 
 ********************************************************************************
@@ -63,8 +63,6 @@ FastCollinearPoints:
 
 % findbugs *.class
 *-----------------------------------------------------------
-L D FE_FLOATING_POINT_EQUALITY FE: Tests for exact floating-point equality. Because floating-point calculations may involve rounding, the calculated values may be imprecise.  At BruteCollinearPoints.java:[line 36]
-Warnings generated: 1
 
 
 ================================================================
@@ -264,43 +262,12 @@ Test 13: throws an exception if either the constructor argument is null
          or any entry in array is null
   * argument is null
   * Point[] of length 10, number of null entries = 1
-    - constructor throws wrong exception
-    - constructor throws a java.lang.NullPointerException
-    - constructor should throw a java.lang.IllegalArgumentException
-     10
-     11117 31102
-     12057 29571
-      1831 18987
-      6753 15880
-     13061  6995
-     21474 26425
-      5300   400
-     32170 23051
-     10870 29450
-     null
-
   * Point[] of length 10, number of null entries = 10
   * Point[] of length 4, number of null entries = 1
-    - constructor throws wrong exception
-    - constructor throws a java.lang.NullPointerException
-    - constructor should throw a java.lang.IllegalArgumentException
-     4
-     21573 20047
-     20591 20333
-     24292  4937
-     null
-
   * Point[] of length 3, number of null entries = 1
   * Point[] of length 2, number of null entries = 1
-    - constructor throws wrong exception
-    - constructor throws a java.lang.NullPointerException
-    - constructor should throw a java.lang.IllegalArgumentException
-     2
-     22440  9128
-     null
-
   * Point[] of length 1, number of null entries = 1
-==> FAILED
+==> passed
 
 Test 14: check that the constructor throws an exception if duplicate points
   * 50 points
@@ -312,7 +279,7 @@ Test 14: check that the constructor throws an exception if duplicate points
 ==> passed
 
 
-Total: 16/17 tests passed!
+Total: 17/17 tests passed!
 
 
 ================================================================
@@ -474,51 +441,12 @@ Test 16: throws an exception if either constructor argument is null
          or any entry in array is null
   * argument is null
   * Point[] of length 10, number of null entries = 1
-    - constructor throws wrong exception
-    - constructor throws a java.lang.NullPointerException
-    - constructor should throw a java.lang.IllegalArgumentException
-     10
-      2960 17575
-     22705  8316
-     12663 29722
-     24263 32174
-      7937  7057
-     null
-     28271 16813
-     19492 32198
-     28065 22799
-      3208 25878
-
   * Point[] of length 10, number of null entries = 10
   * Point[] of length 4, number of null entries = 1
-    - constructor throws wrong exception
-    - constructor throws a java.lang.NullPointerException
-    - constructor should throw a java.lang.IllegalArgumentException
-     4
-      9773 10622
-     27239 30037
-     null
-       866  2923
-
   * Point[] of length 3, number of null entries = 1
-    - constructor throws wrong exception
-    - constructor throws a java.lang.NullPointerException
-    - constructor should throw a java.lang.IllegalArgumentException
-     3
-     23609 14113
-     null
-     11769 22094
-
   * Point[] of length 2, number of null entries = 1
-    - constructor throws wrong exception
-    - constructor throws a java.lang.NullPointerException
-    - constructor should throw a java.lang.IllegalArgumentException
-     2
-     18111  5333
-     null
-
   * Point[] of length 1, number of null entries = 1
-==> FAILED
+==> passed
 
 Test 17: check that the constructor throws an exception if duplicate points
   * 50 points
@@ -530,7 +458,7 @@ Test 17: check that the constructor throws an exception if duplicate points
 ==> passed
 
 
-Total: 20/21 tests passed!
+Total: 21/21 tests passed!
 
 
 ================================================================
@@ -566,11 +494,11 @@ Test 1a-1e: Find collinear points among n random distinct points
                                                       slopeTo()
              n    time     slopeTo()   compare()  + 2*compare()        compareTo()
 -----------------------------------------------------------------------------------------------
-=> passed    16   0.00        3640           0           3640                  164         
-=> passed    32   0.01       71920           0          71920                  619         
-=> passed    64   0.05     1270752           0        1270752                 2318         
-=> passed   128   0.13    21336000           0       21336000                 8863         
-=> passed   256   1.54   349585280           0      349585280                34385         
+=> passed    16   0.00        3640           0           3640                  163         
+=> passed    32   0.01       71920           0          71920                  616         
+=> passed    64   0.05     1270752           0        1270752                 2324         
+=> passed   128   0.14    21336000           0       21336000                 8876         
+=> passed   256   1.94   349585280           0      349585280                34372         
 ==> 5/5 tests passed
 
 Test 2a-2e: Find collinear points among n/4 arbitrary line segments
@@ -579,11 +507,11 @@ Test 2a-2e: Find collinear points among n/4 arbitrary line segments
                                                       slopeTo()
              n    time     slopeTo()   compare()  + 2*compare()        compareTo()
 -----------------------------------------------------------------------------------------------
-=> passed    16   0.00        3740           0           3740                  180         
-=> passed    32   0.00       72345           0          72345                  642         
-=> passed    64   0.05     1272199           0        1272199                 2367         
-=> passed   128   0.46    21342254           0       21342254                 8965         
-=> passed   256   3.84   349611522           0      349611522                34565         
+=> passed    16   0.00        3731           0           3731                  177         
+=> passed    32   0.00       72305           0          72305                  640         
+=> passed    64   0.06     1272421           0        1272421                 2373         
+=> passed   128   0.43    21342734           0       21342734                 8961         
+=> passed   256   3.05   349613062           0      349613062                34567         
 ==> 5/5 tests passed
 
 Total: 10/10 tests passed!
@@ -603,15 +531,15 @@ Test 1a-1g: Find collinear points among n random distinct points
                                                       slopeTo()
              n    time     slopeTo()   compare()  + 2*compare()        compareTo()
 -----------------------------------------------------------------------------------------------
-=> passed    64   0.01        7808       18753          45314                 2323         
-=> passed   128   0.01       32000       89511         211022                 8864         
-=> passed   256   0.03      129536      416464         962464                34384         
-=> passed   512   0.22      521219     1894746        4310711               134804         
-=> passed  1024   0.41     2091014     8545281       19181576               532758         
-=> passed  2048   1.11     8376374    38183364       84743102              2116140         
+=> passed    64   0.01        7808       18906          45620                 2322         
+=> passed   128   0.01       32000       89363         210726                 8870         
+=> passed   256   0.03      129536      414043         957622                34380         
+=> passed   512   0.17      521216     1906644        4334504               134786         
+=> passed  1024   0.33     2091011     8535725       19162461               532758         
+=> passed  2048   0.95     8376368    38092764       84561896              2116108         
 ==> 6/6 tests passed
 
-lg ratio(slopeTo() + 2*compare()) = lg (84743102 / 19181576) = 2.14
+lg ratio(slopeTo() + 2*compare()) = lg (84561896 / 19162461) = 2.14
 => passed
 
 ==> 7/7 tests passed
@@ -621,13 +549,13 @@ Test 2a-2g: Find collinear points among the n points on an n-by-1 grid
                                                       slopeTo()
              n    time     slopeTo()   compare()  + 2*compare()        compareTo()
 -----------------------------------------------------------------------------------------------
-=> passed    64   0.00        4032        4764          13560                 9070         
-=> passed   128   0.00       16256       17796          51848                31104         
-=> passed   256   0.01       65280       68717         202714               112442         
-=> passed   512   0.03      261632      269399         800430               423410         
-=> passed  1024   0.09     1047552     1065026        3177604              1636666         
-=> passed  2048   0.17     4192256     4231214       12654684              6425640         
-=> passed  4096   0.58    16773120    16859163       50491446             25446911         
+=> passed    64   0.00        4032        4764          13560                 9069         
+=> passed   128   0.00       16256       17796          51848                31096         
+=> passed   256   0.01       65280       68717         202714               112433         
+=> passed   512   0.03      261632      269399         800430               423390         
+=> passed  1024   0.07     1047552     1065026        3177604              1636675         
+=> passed  2048   0.13     4192256     4231214       12654684              6425663         
+=> passed  4096   0.45    16773120    16859163       50491446             25446953         
 ==> 7/7 tests passed
 
 lg ratio(slopeTo() + 2*compare()) = lg (50491446 / 12654684) = 2.00
@@ -640,13 +568,13 @@ Test 3a-3g: Find collinear points among the n points on an n/4-by-4 grid
                                                       slopeTo()
              n    time     slopeTo()   compare()  + 2*compare()        compareTo()
 -----------------------------------------------------------------------------------------------
-=> passed    64   0.00        6668       14906          36480                 6636         
-=> passed   128   0.00       26828       43854         114536                24381         
-=> passed   256   0.01      107596      149618         406832                88684         
-=> passed   512   0.03      430924      548156        1527236               332952         
-=> passed  1024   0.09     1724748     2087496        5899740              1281956         
-=> passed  2048   0.31     6901068     8122445       23145958              5018136         
-=> passed  4096   0.86    27608396    31990953       91590302             19836900         
+=> passed    64   0.00        6668       14906          36480                 6642         
+=> passed   128   0.00       26828       43854         114536                24384         
+=> passed   256   0.01      107596      149618         406832                88671         
+=> passed   512   0.02      430924      548156        1527236               332977         
+=> passed  1024   0.07     1724748     2087496        5899740              1281935         
+=> passed  2048   0.24     6901068     8122445       23145958              5018158         
+=> passed  4096   0.69    27608396    31990953       91590302             19836897         
 ==> 7/7 tests passed
 
 lg ratio(slopeTo() + 2*compare()) = lg (91590302 / 23145958) = 1.98
@@ -659,13 +587,13 @@ Test 4a-4g: Find collinear points among the n points on an n/8-by-8 grid
                                                       slopeTo()
              n    time     slopeTo()   compare()  + 2*compare()        compareTo()
 -----------------------------------------------------------------------------------------------
-=> passed    64   0.00        6788       18045          42878                 5969         
-=> passed   128   0.00       27432       75863         179158                24697         
-=> passed   256   0.01      110128      232229         574586                94038         
-=> passed   512   0.03      441184      854545        2150274               357747         
-=> passed  1024   0.08     1765900     3260991        8287882              1386372         
-=> passed  2048   0.27     7065804    12699218       32464240              5443367         
-=> passed  4096   1.08    28267460    50043244      128353948             21549846         
+=> passed    64   0.00        6788       18045          42878                 5975         
+=> passed   128   0.00       27432       75863         179158                24689         
+=> passed   256   0.01      110128      232229         574586                94028         
+=> passed   512   0.02      441184      854545        2150274               357735         
+=> passed  1024   0.09     1765900     3260991        8287882              1386344         
+=> passed  2048   0.25     7065804    12699218       32464240              5443325         
+=> passed  4096   0.99    28267460    50043244      128353948             21549808         
 ==> 7/7 tests passed
 
 lg ratio(slopeTo() + 2*compare()) = lg (128353948 / 32464240) = 1.98

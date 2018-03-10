@@ -12,6 +12,7 @@ public class BruteCollinearPoints {
         for (int i = 0; i < n; i++) {
             if (points[i] == null) throw new IllegalArgumentException();
             for (int j = i + 1; j < n; j++) {
+                if (points[j] == null) throw new IllegalArgumentException();
                 if (points[i].compareTo(points[j]) == 0)
                     throw new IllegalArgumentException();
             }
@@ -25,6 +26,7 @@ public class BruteCollinearPoints {
                 for (int k = j + 1; k < n; k++) {
                     for (int g = k + 1; g < n; g++) {
                         Point[] p = new Point[4];
+                        if (ps[i] == null || ps[j] == null || ps[k] == null || ps[g] == null) throw new IllegalArgumentException();
                         p[0] = ps[i];
                         p[1] = ps[j];
                         p[2] = ps[k];
@@ -33,7 +35,7 @@ public class BruteCollinearPoints {
                         double s2 = p[0].slopeTo(p[2]);
                         if (Double.compare(s1, s2) != 0) continue;
                         double s3 = p[0].slopeTo(p[3]);
-                        if (s1 == s3) {
+                        if (Double.compare(s1, s3) == 0) {
                             Arrays.sort(p);
                             list.add(new LineSegment(p[0], p[3]));
                         }
